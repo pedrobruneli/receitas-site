@@ -1,0 +1,76 @@
+.quem-somos{
+  height: 600px;
+  &__info{
+    font-family: 'Pacifico';
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #8D0606;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+    &__title{
+      margin: 0;
+    }
+    &__desc{
+      font-size: 1.4rem;
+      font-weight: 300;
+      font-family: 'Roboto';
+      color: #8C8888;
+      margin: 0;
+    }
+  }
+  &__people{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    &__card{
+      width: 270px;
+      &__image--roberta{
+        width: 260px;
+        height: 260px;
+        background-image: url('../../../../assets/images/pessoas/roberta.jpg');
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+      &__image--marcela{
+        width: 260px;
+        height: 260px;
+        background-image: url('../../../../assets/images/pessoas/andreia.jpg');
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+      &__image--andreia{
+        width: 260px;
+        height: 260px;
+        background-image: url('../../../../assets/images/pessoas/marcela.jpg');
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+      &__desc{
+        text-align: center;
+        h1{
+          font-family: 'Pacifico';
+          color: #8D0606;
+          margin: 0;
+        }
+        p{
+          font-family: 'Roboto';
+          color: #8C8888;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 827px) {
+  .quem-somos__people__card{
+    padding-top: 0px;
+  }
+}
+@media screen and (min-width: 0px) {
+  .quem-somos__people__card{
+    padding-top: 30px;
+  }
+}
+

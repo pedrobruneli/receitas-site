@@ -1,0 +1,14 @@
+<section *ngIf="!validToken" class="login__container">
+  <h1>LOGIN</h1>
+  <form (ngSubmit)="onSubmit()" #formLogin="ngForm" class="login__container__form">
+    <div class="login__container__form__input">
+      <label>Login</label>
+      <input [(ngModel)]="username" name="username" type="text" required>
+    </div>
+    <div class="login__container__form__input">
+      <label>Password</label>
+      <input [(ngModel)]="password" name="password" type="password" required>
+    </div>
+    <button class="login__container__form__button" [disabled]="formLogin.invalid">Login</button>
+  </form>
+</section>

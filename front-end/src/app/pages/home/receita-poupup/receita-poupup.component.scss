@@ -1,0 +1,40 @@
+.receita-poupup__container{
+  display: flex;
+  font-family: 'Roboto';
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  background: rgba($color: grey, $alpha: 0.2);
+  top: 0;
+  &__card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    width: 50%;
+    height: 70%;
+    background-color: rgba($color: #FFFFFF, $alpha: 0.85);
+    border-radius: 10px;
+    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+    ul {
+      padding: 20px;
+    }
+    &__primary{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h1{
+        margin: 0;
+        padding-top: 10px;
+      }
+      &__close{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        align-self: start;
+      }
+    }
+  }
+}

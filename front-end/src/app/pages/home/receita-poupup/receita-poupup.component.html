@@ -1,0 +1,13 @@
+<div *ngIf="show" class="receita-poupup__container">
+  <div class="receita-poupup__container__card">
+    <div class="receita-poupup__container__card__primary">
+      <h1>{{receita.nome}}</h1>
+      <img (click)="toggleShow()" class="receita-poupup__container__card__primary__close" src="../../assets/images/svg/close.svg" />
+    </div>
+    <ul>
+      <li *ngFor="let item of receita?.receita?.split('%n')">
+        {{item}}
+      </li>
+    </ul>
+  </div> 
+</div>

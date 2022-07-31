@@ -1,0 +1,27 @@
+<div class="create-receita">
+  <section class="create-receita__container">
+    <h1>POSTAR RECEITA</h1>
+    <form (ngSubmit)="onSubmit()" #formReceita="ngForm" class="create-receita__container__form">
+      <div class="create-receita__container__form__input">
+        <label>Nome</label>
+        <input [(ngModel)]="nomeReceita" name="nomeReceita" type="text" required>
+      </div>
+      <div class="create-receita__container__form__input">
+        <label>Receita</label>
+        <input [(ngModel)]="receita" name="receita" type="text" required>
+      </div>
+      <div class="create-receita__container__form__imagem">
+        <label for="tipoImagem">Imagem</label>
+        <input *ngIf="valorSelecionado === 'arquivo'" type="file" class="create-receita__container__form__file" accept="image/*" (change)="onFileChange($event)">
+        <input [(ngModel)]="imagem" id="link" name="link" *ngIf="valorSelecionado === 'link'" type="text"> 
+        <select [(ngModel)]="valorSelecionado" name="tipoImagtipoImagem" id="tipoImagem">
+            <option value="arquivo">Arquivo</option>
+            <option value="link">Link</option>
+        </select>
+      </div>
+
+      <button class="create-receita__container__form__button" [disabled]="formReceita.invalid">Postar</button>
+    </form>
+  </section>
+  
+</div>

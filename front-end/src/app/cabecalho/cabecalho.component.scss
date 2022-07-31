@@ -1,0 +1,39 @@
+.cabecalho {
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    &__imagem{
+      cursor: pointer;
+    }
+    &__items {
+      margin: 0;
+      gap: 30px;
+      display: flex;
+      align-items: center;
+      list-style: none;
+      li {
+        a {
+          text-decoration: none;
+          color: grey;
+          font-family: "Roboto";
+          font-weight: bold;
+          &:hover{
+            color: rgb(0, 0, 0);
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 0px) {
+  .cabecalho__nav__imagem {
+    height: 54px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cabecalho__nav__imagem {
+    height: 72px;
+  }
+}

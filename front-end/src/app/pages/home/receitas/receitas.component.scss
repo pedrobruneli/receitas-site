@@ -1,0 +1,95 @@
+.receitas__container{
+  background: #F1F1F1;
+}
+.receitas__title{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  animation: 1.5s ease-out 0s 1 slideFromLeft;
+  h1{
+    font-family: 'Pacifico';
+    color: #8D0606;
+    margin: 0;
+  }
+  h3{
+    font-family: 'Roboto';
+    color: #8C8888;
+    margin: 0;
+    width: 50%;
+  }
+}
+.receitas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  grid-gap: 50px;
+  position: relative;
+  &__card{
+    animation: 1.5s ease-out 0s 1 slideFromLeft;
+    width: 286px;
+    height: 350px;
+    display: inline;
+    border: solid 1px rgba($color: #000000, $alpha: 0.2);
+    border-radius: 5px;
+    font-family: 'Roboto';
+    img{
+      width: 286px;
+      height: 181px;
+    }
+    &:hover{
+      transform: scale(1.01);
+    }
+    &__info{
+      display: flex;
+      flex-direction: column;
+      animation: 1.5s ease-out 0s 1 slideFromLeft;
+      padding: 0 10px 0 10px;
+      h2{
+        height: 70px;
+      }
+      &__button{
+        animation: 1.5s ease-out 0s 1 slideFromLeft;
+        background: #8D0606;
+        color: white;
+        border: none;
+        width: 115px;
+        height: 37px;
+        border-radius: 5px;
+        &:hover{
+          background: #740505;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+  .receitas__title{
+    h1{
+      font-size: 3rem;
+    }
+    h3{
+      font-size: 1.75rem;
+    }
+  }
+}
+
+@media screen and (min-width: 0px) {
+  .receitas__title{
+    h1{
+      font-size: 2rem;
+    }
+    h3{
+      font-size: 1.25rem;
+      width: 80%;
+    }
+  }
+  .receitas{
+    padding-top: 30px;
+  }
+}

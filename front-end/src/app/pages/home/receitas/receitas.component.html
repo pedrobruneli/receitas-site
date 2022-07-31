@@ -1,0 +1,28 @@
+<app-receita-poupup (close)="toggleShow()" [receita]="receita" [show]="show"></app-receita-poupup>
+<section id="receitas" class="receitas__container">
+  <section class="receitas__title">
+    <h1>Receitas para economizar e ganhar saúde</h1>
+    <h3>
+      Nossas receitas ajudam você a aproveitar melhor os alimentos, economizar,
+      ganhar tempo e praticidade
+    </h3>
+  </section>
+  <swiper 
+  [config]="config"
+  >
+    <ng-template *ngFor="let page of pages; index as i" swiperSlide>
+      <section class="receitas">
+
+        <div *ngFor="let receita of receitas[i]" class="receitas__card">
+          <img src={{receita.imagem}} />
+          <div class="receitas__card__info">
+            <h2 class="receitas__card__info__title">{{receita.nome}}</h2>
+            <button class="receitas__card__info__button" id="{{receita._id}}" (click)="onClickReceita(receita)">Ver receita</button>
+          </div>
+        </div>
+
+      </section>
+    </ng-template>
+  </swiper>
+  <br><br>
+</section>

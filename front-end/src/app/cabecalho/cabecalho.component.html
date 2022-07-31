@@ -1,0 +1,19 @@
+<header id="cabecalho" class="cabecalho">
+  <nav class="cabecalho__nav">
+    <img
+      routerLink="/"
+      class="cabecalho__nav__imagem"
+      src="../../assets/images/logo.jpg"
+      alt=""
+    />
+    <ul class="cabecalho__nav__items">
+      <li><a routerLink="/">início</a></li>
+      <li><a href="#receitas">receitas</a></li>
+      <li><a href="#quem-somos">quem somos</a></li>
+      <li>
+        <a *ngIf="!validToken" routerLink="/login">login</a>
+        <a *ngIf="validToken" routerLink="/create-receita">post</a>
+      </li>
+    </ul>
+  </nav>
+</header>
