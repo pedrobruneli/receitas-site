@@ -1,10 +1,9 @@
 import receitas from "../models/Receita.js";
-import { IMAGES_PATH } from "../routes/receitasRoutes.js";
 
 class ReceitaController {
   static getReceitas = (req, res) => {
-    receitas.find((err, livros) => {
-      return res.status(200).json(livros);
+    receitas.find((err, receitas) => {
+      return res.status(200).json(receitas);
     });
   };
 

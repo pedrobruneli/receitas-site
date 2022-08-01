@@ -11,8 +11,9 @@ export class CabecalhoComponent implements OnInit {
   validToken: boolean = false;
 
   constructor(private service: LoginService) {
-
-
+    service.refreshHeader.subscribe(refresh => {
+      this.validToken = refresh;
+    })
    }
 
   ngOnInit(): void {
