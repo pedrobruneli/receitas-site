@@ -22,8 +22,9 @@ export class LoginScreenComponent implements OnInit {
     this.service.loginUser(this.username, this.password).subscribe(
       (res) => {
         localStorage.setItem('token', res.token ?? '');
-        this.validToken = true;
         alert('Logado com sucesso!')
+        this.validToken = true;
+        this.service.refreshHeader.emit(true);
         this.router.navigate(['create-receita']);
       },
       (err) => {
@@ -40,6 +41,7 @@ export class LoginScreenComponent implements OnInit {
       },
       (err) => {
         this.validToken = false;
+        this.service.refreshHeader.emit(false);
       }
     );
   }
